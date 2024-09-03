@@ -1,0 +1,41 @@
+@mixin m945 {
+    @media only screen and (max-width: 945px) {
+    @content;
+    }
+    }
+
+    @mixin d900 {
+        @media only screen and (min-width: 900px) {
+        @content;
+        }
+        }
+
+    @mixin m810 {
+        @media only screen and (max-width: 810px) {
+        @content;
+        }
+        }
+
+        @mixin m720 {
+            @media only screen and (max-width: 720px) {
+            @content;
+            }
+            }
+
+            @mixin m606 {
+                @media only screen and (max-width: 606px) {
+                @content;
+                }
+                }
+
+                @mixin m1270 {
+                    @media only screen and (max-width: 1270px) {
+                    @content;
+                    }
+                    }
+
+                    @mixin m1000 {
+                        @media only screen and (max-width: 1000px) {
+                        @content;
+                        }
+                        }

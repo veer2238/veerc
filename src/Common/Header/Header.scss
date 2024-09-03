@@ -1,0 +1,354 @@
+@import '../Mixin.scss';
+.header{
+    background-color: white;
+    border-bottom: 0.3px solid rgba(0, 0, 0, 0.073);
+    padding:16px 0px 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left{
+      font-weight: 700;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+     color: #000000c8;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: normal; 
+      transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; 
+    
+
+
+      
+
+       
+
+       &:nth-child(1){
+        
+        @include m606{
+          display: none;
+        }
+       }
+
+       &:nth-child(2){
+        display: none;
+        @include m606{
+          display: block;
+        }
+       }
+
+     
+
+       @include m810{
+        font-size: 20px;
+       }
+
+       @include m720{
+        font-size: 16px;
+      }
+        
+ 
+
+    }
+
+  
+
+    .center{
+
+    border: 0.3px solid rgba(0, 0, 0, 0.073);
+    padding:8px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.023);
+   width: 390px;
+   cursor: text;
+   transition: all 0.3s ease;
+
+   @include m945{
+    width: 250px;
+   }
+
+   @include m720{
+width: 200px;
+  }
+   @include m606{
+    display: none;
+   }
+   
+
+   .icon{
+    display: flex;
+    align-items: center;
+    svg{
+        font-weight: 900;
+        font-size: 19px;
+    }
+   }
+
+   .search{
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 4px;
+    
+
+    
+  
+   
+   }
+
+   .animate {
+    animation: text-fade 1s ease-in-out;
+  
+  }
+
+   
+
+
+
+   
+
+    }
+
+
+    // for search center
+
+    .centers{
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      @include m606{
+        display: none;
+       }
+
+      input{
+        color: #000000c0;
+      padding:14px 35px;
+      border-radius: 10px;
+     font-size: 16px;
+     width: 750px;
+     cursor: text;
+     border: 1px solid rgba(0, 0, 0, 0.279);
+     transition: all 0.3s ease;
+
+     &:focus{
+      outline: 0;
+     }
+
+     &::placeholder{
+      color: rgba(0,0,0,0.4);
+     
+     }
+
+     @include m1270{
+      width: 500px;
+     }
+
+     @include m1000{
+     width: 350px;
+     }
+  
+     @include m945{
+      width: 250px;
+     }
+  
+     @include m720{
+  width: 200px;
+    }
+     
+
+
+     
+    }
+  
+    
+     
+      svg{
+        position: absolute;
+       
+        left: 10px;
+          font-weight: 900;
+          font-size: 19px;
+
+      }
+ 
+      }
+
+
+    .right{
+    display: flex;
+   
+
+      .btn1{
+        border:1px solid #ff00005a;
+        padding:14px 16px;
+background-color:#FF0000;
+color: rgb(255, 255, 255);
+margin-right: 20px;
+font-size: 16px;
+font-family: monospace;
+font-weight: 500;
+display: flex;
+align-items: center;
+gap: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include m606{
+      padding:8px 10px;
+      margin-right:15px;
+     }
+
+    &:hover{
+      border:1px solid #ff00005a;
+      background-color:transparent;
+      color: rgb(0, 0, 0);
+    }
+
+  
+
+
+
+      }
+
+      
+      .btn2{
+        border:0.3px solid #ff00005a;
+        padding:14px 16px;
+        background-color:#000000;
+        color: white;
+font-size: 16px;
+font-family: monospace;
+font-weight: 500;
+display: flex;
+align-items: center;
+gap: 5px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+      border:1px solid rgba(0, 0, 0, 0.247);
+      background-color:transparent;
+      color: black
+    }
+
+    @include m606{
+      padding:8px 10px;
+     }
+  
+
+
+
+      }
+    }
+}
+
+
+
+
+// for search bar in mobile
+
+.centerm{
+
+  border: 0.3px solid rgba(0, 0, 0, 0.073);
+  padding:10px;
+  border-radius: 10px;
+ display: flex;
+  align-items: center;
+  margin:10px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.023);
+
+ cursor: text;
+ transition: all 0.3s ease;
+ display: none;
+
+
+ @include m606{
+  display: flex;
+ }
+ 
+
+
+  svg{
+      font-weight: 900;
+      font-size: 19px;
+  }
+ 
+
+
+
+ .animate {
+  animation: text-fade 1s ease-in-out;
+
+}
+
+ 
+
+
+
+ 
+
+  }
+
+   // for search center
+
+   .centermo{
+    position: relative;
+    display: none;
+    align-items: center;
+
+    @include m606{
+      display:flex;
+     }
+
+    input{
+      border: 1px solid rgba(0, 0, 0, 0.279);
+    padding:14px 35px;
+    width: 100%;
+    color: #000000c0;
+    margin: 10px;
+    border-radius: 10px;
+   font-size: 16px;
+  
+   
+   cursor: text;
+   transition: all 0.3s ease;
+
+   &:focus{
+    outline: 0;
+    
+   }
+
+   &::placeholder{
+    color: rgba(0,0,0,0.4);
+   
+   }
+
+   
+  }
+
+  
+   
+    svg{
+      position: absolute;
+     
+      left: 20px;
+        font-weight: 900;
+        font-size: 19px;
+
+    }
+
+    }
+
+@keyframes text-fade {
+    0% { opacity: 0; transform: translateY(20px); }
+    50% { opacity: 0.9; transform: translateY(0); }
+    100% { opacity: 1; transform: translateY(0); }
+    
+  }
+
